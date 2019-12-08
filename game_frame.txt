@@ -1,0 +1,220 @@
+import java.awt.Color;
+import java.awt.event.WindowEvent;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+
+public class TicTacToe_s extends javax.swing.JFrame {
+   
+    public TicTacToe_s() {
+        initComponents();
+        setSize(1000,600);
+        setLocationRelativeTo(null);
+       
+    }
+
+                           
+    private void initComponents() {
+
+        jPanel18 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        jButton3 = new javax.swing.JButton();
+        jPanel8 = new javax.swing.JPanel();
+        jButton4 = new javax.swing.JButton();
+        jPanel9 = new javax.swing.JPanel();
+        jButton5 = new javax.swing.JButton();
+        jPanel10 = new javax.swing.JPanel();
+        jButton6 = new javax.swing.JButton();
+        jPanel13 = new javax.swing.JPanel();
+        jButton7 = new javax.swing.JButton();
+        jPanel14 = new javax.swing.JPanel();
+        jButton8 = new javax.swing.JButton();
+        jPanel15 = new javax.swing.JPanel();
+        jButton9 = new javax.swing.JButton();
+        jPanel19 = new javax.swing.JPanel();
+        jButton10 = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("TicTacToe");
+
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel1.setLayout(new java.awt.BorderLayout());
+
+        jLabel1.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 100)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("TicTacToe");
+        jPanel1.add(jLabel1, java.awt.BorderLayout.PAGE_START);
+
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.setLayout(new java.awt.GridLayout(3, 5, 2, 2));
+
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setLayout(new java.awt.BorderLayout());
+
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 96)); 
+       
+        jPanel3.add(jButton1, java.awt.BorderLayout.CENTER);
+
+        jPanel2.add(jPanel3);
+
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setLayout(new java.awt.BorderLayout());
+
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 96)); 
+        
+        jPanel4.add(jButton2, java.awt.BorderLayout.CENTER);
+
+        jPanel2.add(jPanel4);
+
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel5.setLayout(new java.awt.BorderLayout());
+
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 96)); 
+        
+        jPanel5.add(jButton3, java.awt.BorderLayout.CENTER);
+
+        jPanel2.add(jPanel5);
+
+        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel8.setLayout(new java.awt.BorderLayout());
+
+        jButton4.setFont(new java.awt.Font("Tahoma", 1, 96)); 
+        
+        jPanel8.add(jButton4, java.awt.BorderLayout.CENTER);
+
+        jPanel2.add(jPanel8);
+
+        jPanel9.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel9.setLayout(new java.awt.BorderLayout());
+
+        jButton5.setFont(new java.awt.Font("Tahoma", 1, 96)); 
+        
+        jPanel9.add(jButton5, java.awt.BorderLayout.CENTER);
+
+        jPanel2.add(jPanel9);
+
+        jPanel10.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel10.setLayout(new java.awt.BorderLayout());
+
+        jButton6.setFont(new java.awt.Font("Tahoma", 1, 96)); 
+       
+        jPanel10.add(jButton6, java.awt.BorderLayout.CENTER);
+
+        jPanel2.add(jPanel10);
+
+        jPanel13.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel13.setLayout(new java.awt.BorderLayout());
+
+        jButton7.setFont(new java.awt.Font("Tahoma", 1, 96)); 
+       
+        jPanel13.add(jButton7, java.awt.BorderLayout.CENTER);
+
+        jPanel2.add(jPanel13);
+
+        jPanel14.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel14.setLayout(new java.awt.BorderLayout());
+
+        jButton8.setFont(new java.awt.Font("Tahoma", 1, 96));
+       
+        jPanel14.add(jButton8, java.awt.BorderLayout.CENTER);
+
+        jPanel2.add(jPanel14);
+
+        jPanel15.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel15.setLayout(new java.awt.BorderLayout());
+
+        jButton9.setFont(new java.awt.Font("Tahoma", 1, 96));
+        
+        jPanel15.add(jButton9, java.awt.BorderLayout.CENTER);
+
+        jPanel2.add(jPanel15);
+
+        jPanel1.add(jPanel2, java.awt.BorderLayout.CENTER);
+
+        jButton10.setText("RESET");
+        jButton10.setAlignmentX(1.0F);
+        jButton10.setAlignmentY(2.0F);
+      
+         
+        jPanel19.add(jButton10);
+
+        jPanel1.add(jPanel19, java.awt.BorderLayout.PAGE_END);
+        
+        btnBack = new JButton("BACK");
+        
+        jPanel19.add(btnBack);
+
+        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
+
+        pack();
+        setLocationRelativeTo(null);
+    }                       
+private JFrame frame;
+    
+    public static void main(String args[]) {
+      
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(TicTacToe_s.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(TicTacToe_s.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(TicTacToe_s.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(TicTacToe_s.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+      
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new TicTacToe_s().setVisible(true);
+            }
+        });
+    }
+
+                       
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel19;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private JButton btnBack;
+                      
+}
