@@ -1,0 +1,123 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.ActionEvent;
+
+public class help extends JFrame {
+
+	private JPanel contentPane;
+
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					help frame = new help();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+
+	public help() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(450,200,1000,600);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		
+		JLabel lblNewLabel_1 = new JLabel("1. The game is played on a grid that's 3 squares by 3 squares.");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel_1.setBounds(10, 51, 555, 29);
+		contentPane.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("2. You are X, your friend  is O. Players take turns putting their marks in empty squares.\r\n\r\n");
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel_2.setBounds(10, 91, 861, 44);
+		contentPane.add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_3 = new JLabel("3. The first player to get 3 of her marks in a row (up, down, across, or diagonally) is the winner.");
+		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel_3.setBounds(10, 164, 914, 29);
+		contentPane.add(lblNewLabel_3);
+		
+		JLabel lblNewLabel = new JLabel("RULES FOR TIC-TAC-TOE :");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		lblNewLabel.setBounds(10, 11, 411, 29);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblNewLabel_4 = new JLabel("4. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.");
+		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel_4.setBounds(10, 222, 964, 29);
+		contentPane.add(lblNewLabel_4);
+		
+		JLabel lblNewLabel_5 = new JLabel("Contract :");
+		lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		lblNewLabel_5.setBounds(10, 312, 147, 29);
+		contentPane.add(lblNewLabel_5);
+		
+		JLabel lblNewLabel_6 = new JLabel("Hossain,Sajjad");
+		lblNewLabel_6.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel_6.setBounds(10, 376, 147, 29);
+		contentPane.add(lblNewLabel_6);
+		
+		JLabel lblNewLabel_7 = new JLabel("Hossen,MD.Shakil");
+		lblNewLabel_7.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel_7.setBounds(10, 416, 177, 29);
+		contentPane.add(lblNewLabel_7);
+		
+		JLabel lblNewLabel_8 = new JLabel("Neha,Mitheela Farzana");
+		lblNewLabel_8.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel_8.setBounds(10, 463, 223, 29);
+		contentPane.add(lblNewLabel_8);
+		
+		JLabel lblNewLabel_9 = new JLabel("Ashreen,Sumaiya ");
+		lblNewLabel_9.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel_9.setBounds(10, 503, 185, 36);
+		contentPane.add(lblNewLabel_9);
+		
+		JLabel lblNewLabel_10 = new JLabel("ID:18-36689-1");
+		lblNewLabel_10.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel_10.setBounds(252, 418, 169, 25);
+		contentPane.add(lblNewLabel_10);
+		
+		JLabel label = new JLabel("ID:18-36693-1");
+		label.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		label.setBounds(252, 378, 169, 25);
+		contentPane.add(label);
+		
+		JLabel lblId_1 = new JLabel("ID:18-36649-1");
+		lblId_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblId_1.setBounds(252, 465, 169, 25);
+		contentPane.add(lblId_1);
+		
+		JLabel lblId = new JLabel("ID:18-36658-1");
+		lblId.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblId.setBounds(252, 509, 169, 25);
+		contentPane.add(lblId);
+		
+		JButton btnNewButton = new JButton("Back");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				firstpage abc = new firstpage();
+				abc.setVisible(true);
+			}
+		});
+		btnNewButton.setBounds(821, 503, 103, 34);
+		contentPane.add(btnNewButton);
+	}
+}
